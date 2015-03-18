@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+mainClassName = 'ter.tom.Main'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+
+jar {
+    baseName = 'RomanToInteger'
+    manifest.attributes("Main-Class": mainClassName);
+    version =  '0.1.0'
+}
+
